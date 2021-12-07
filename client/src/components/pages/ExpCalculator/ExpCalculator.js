@@ -8,11 +8,15 @@ class ExpCalculator extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {exp: levelExp, currentLevel: '', targetLevel: '', calculated: false,
+        this.state = {exp: levelExp, currentLevel: '', targetLevel: '', currentEXP: '', calculated: false,
             herosWits: 0, adventurers: 0, wanderers: 0, totalEXP: 0  
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    changeCurrentEXP(event) {
+        this.setState({currentEXP: event.target.value});
     }
 
     changeCurrentLevel(event) {
@@ -40,6 +44,8 @@ class ExpCalculator extends React.Component {
             //console.log(this.state.exp[i]);
             totalEXPNeeded += this.state.exp[i];
         }
+
+        totalEXPNeeded -= this.state.currentEXP;
 
         this.setState({totalEXP: totalEXPNeeded});
 
@@ -76,23 +82,38 @@ class ExpCalculator extends React.Component {
                     <div className='exp-container'>
                     <form onSubmit={this.handleSubmit}>
                         <label className="exp-input-label">
+                        Current EXP: </label>
+                        <input className="exp-input" type="text" placeholder="1477" value={this.state.currentEXP} onChange={this.changeCurrentEXP.bind(this)} />
+
+                        <br/>
+                        <br/>
+
+                        <label className="exp-input-label">
                         Current Level: </label>
                         <input className="exp-input" type="text" placeholder="20" value={this.state.currentLevel} onChange={this.changeCurrentLevel.bind(this)} />
                         
-                        <p />
+                        <br/>
+                        <br/>
+                        
                         
 
                         <label className="exp-input-label">
                         Target Level: </label>
                         <input className="exp-input" type="text" placeholder="80" value={this. state.targetLevel} onChange={this.changeTargetLevel.bind(this)} />
                         
-                        <p />
+                        <br/>
+                        <br/>
                         <Button buttonSize='btn--wide' buttonColor='blue'>Submit</Button> 
                     </form>
 
                     {this.state.calculated ? 
                         <div className="calculation-container">
                             <table>
+                            <tr>
+                                <td className="calculated-label">Total EXP needed:</td>
+                                <td>{this.state.totalEXP}</td>
+                            </tr>
+
                             <tr>
                                 <td className="calculated-label">Total Hero's Wits needed:</td>
                                 <td>{this.state.herosWits}</td>
