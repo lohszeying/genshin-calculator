@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
+import ExpCalculator from './components/pages/ExpCalculator/ExpCalculator';
 import Footer from './components/pages/Footer/Footer'
 import Home from './components/pages/HomePage/Home';
 
@@ -27,7 +28,8 @@ class App extends Component {
             <Router>
                 <Navbar />
                 <Routes>
-                    <Route exact path='/' element={<Home />} />
+                    <Route exact path='/' element={<ExpCalculator />} />
+                    <Route exact path='/home' element={<Home />} />
                 </Routes>
                 <Footer />
             </Router>

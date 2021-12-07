@@ -1,0 +1,21 @@
+.darkBg {
+    background-color: #1c2237;
+}
+
+.exp-container {
+    padding: 4rem 0 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.exp-input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.exp-input-label {
+    color: #fff;
+}
