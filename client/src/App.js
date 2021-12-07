@@ -1,7 +1,9 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
+import Footer from './components/pages/Footer/Footer'
+import Home from './components/pages/HomePage/Home';
 
 class App extends Component {
     constructor(props) {
@@ -25,8 +27,9 @@ class App extends Component {
             <Router>
                 <Navbar />
                 <Routes>
-                    <Route path='/' />
+                    <Route exact path='/' element={<Home />} />
                 </Routes>
+                <Footer />
             </Router>
         );
     }
