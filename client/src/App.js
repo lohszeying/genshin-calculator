@@ -12,7 +12,7 @@ class App extends Component {
         this.state = { apiResponse: "" };
     }
 
-    callAPI() {
+    /*callAPI() {
         fetch("http://localhost:9000/testAPI")
             .then(res => res.text())
             .then(res => this.setState({ apiResponse: res }))
@@ -21,7 +21,7 @@ class App extends Component {
 
     componentDidMount() {
         this.callAPI();
-    }
+    } */
 
     render() {
         return (
