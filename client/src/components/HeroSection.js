@@ -6,9 +6,11 @@ import './HeroSection.css'
 function HeroSection() {
     return (
         <>
+        <div className={lightBg ? 'home__hero-section' : 'home__hero-section darkBg'}>
             
+        </div>
         </>
-    )
+    );
 }
 
 export default HeroSection
