@@ -80,7 +80,7 @@ class ExpCalculator extends React.Component {
             <>
                 <div className="darkBg">
                     <div className='exp-container'>
-                        <p>Calculate the EXP material needed for your Genshin character!</p>
+                        <p className="exp-subtitle">Calculate the EXP material needed for your Genshin character!</p>
                     
                         <div className="exp-main">
                             
