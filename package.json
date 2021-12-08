@@ -2,9 +2,8 @@
   "name": "genshin-calculator",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "heroku-prebuild": "cd client && npm install && npm run build",
+    "heroku-prebuild": "cd client && npm install && npm run build && cd .. && cd api && npm install",
     "start": "cd client && npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
