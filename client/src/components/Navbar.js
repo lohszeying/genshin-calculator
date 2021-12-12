@@ -35,7 +35,7 @@ function Navbar() {
                 <div className='navbar-container container'>
                     <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
                         <MdFingerprint className='navbar-icon' />
-                        Test
+                        Genshin Calculator
                     </Link>
                     <div className='menu-icon' onClick={handleClick}>
                         {click ? <FaTimes/> : <FaBars/>}
@@ -44,17 +44,17 @@ function Navbar() {
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className="nav-item">
                             <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                                Test
+                                EXP Calculator
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to='/farm' className='nav-links' onClick={closeMobileMenu}>
+                                Domain Farm Availablility
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link to='/home' className='nav-links' onClick={closeMobileMenu}>
                                 Home
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to='/products' className='nav-links' onClick={closeMobileMenu}>
-                                Products
                             </Link>
                         </li>
                         <li className="nav-btn">
