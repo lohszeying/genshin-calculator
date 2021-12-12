@@ -31,6 +31,7 @@ class App extends Component {
                 <Routes>
                     <Route exact path='/' element={<ExpCalculator />} />
                     <Route path='/farm' element={<Farming />} />
+                    <Route path='/home' element={<Home />} />
                     
                 </Routes>
                 <Footer />

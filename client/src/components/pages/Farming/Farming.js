@@ -1,12 +1,11 @@
 import React from 'react'
 import DomainFarm from '../../DomainFarm'
-import {farmTalent, farmWeapon} from './Data'
+import {farmTalent} from './Data'
 
 function Farming() {
     return (
         <> 
             <DomainFarm {...farmTalent} />
-            <DomainFarm {...farmWeapon} />
         </>
     )
 }

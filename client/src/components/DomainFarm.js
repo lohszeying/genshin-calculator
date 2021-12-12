@@ -8,8 +8,9 @@ import {IconContext} from 'react-icons/lib'
 import './DomainFarm.css'
 
 function DomainFarm({
-    typeOfFarm, typeOfMaterial, typeOfMaterialImg1, typeOfMaterialImg2, typeOfMaterialImg3, typeOfMaterialImg4, typeOfMaterialImg5, typeOfMaterialImg6, alt, test
+    typeOfFarm, typeOfMaterial, typeOfMaterialImg, typeOfMaterialLabel, alt, chars
 }) {
+
     return (
         <IconContext.Provider value={{color: '#fff', size: 64}}>
 
@@ -26,30 +27,34 @@ function DomainFarm({
                                 </div>
 
                                 <h3>Monday/Thursday</h3>
-                                <h4>{typeOfMaterial}</h4>
+                                <h4>{typeOfMaterial.one}</h4>
 
                                 <div className="domainfarm__material-img-wrapper">
-                                    <img src={typeOfMaterialImg1} alt={alt} className="domainfarm__material-img" />
-                                    <img src={typeOfMaterialImg2} alt={alt} className="domainfarm__material-img" />
-                                    <img src={typeOfMaterialImg3} alt={alt} className="domainfarm__material-img" />
+                                    <img src={typeOfMaterialImg.one[0]} alt={alt} className="domainfarm__material-img" />
+                                    <img src={typeOfMaterialImg.one[1]} alt={alt} className="domainfarm__material-img" />
+                                    <img src={typeOfMaterialImg.one[2]} alt={alt} className="domainfarm__material-img" />
                                 </div>
 
-                                <table>
+                                <table className="characters">
                                     <tr>
-                                        <td className="domainfarm__label">Freedom</td>
+                                        <td className="domainfarm__label">{typeOfMaterialLabel.one[0]}</td>
                                         <td className="domainfarm__character-img-wrapper">
-                                            
+                                            { (chars.one[0] || []).map(({src}) => <img src={src} key={src} alt={alt} className="domainfarm__characters-img" />) }
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td className="domainfarm__label">{typeOfMaterialLabel.one[1]}</td>
+                                        <td className="domainfarm__character-img-wrapper">
+                                            { (chars.one[1] || []).map(({src}) => <img src={src} key={src} alt={alt} className="domainfarm__characters-img" />) }
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td className="domainfarm__label">{typeOfMaterialLabel.one[2]}</td>
+                                        <td className="domainfarm__character-img-wrapper">
+                                            { (chars.one[2] || []).map(({src}) => <img src={src} key={src} alt={alt} className="domainfarm__characters-img" />) }
                                         </td>
                                     </tr>
                                 </table>
-
-
-                                <ul className="domainfarm__container-features">
-                                    <li>Freedom: Aloy, Amber, Barbara, Diona, Klee, Sucrose, Tartaglia, Traveler</li>
-                                    <li>Prosperity: Keqing, Ningguang, Qiqi, Traveler, Xiao</li>
-                                    <li>Transience: Kokomi, Thoma, Traveler, Yoimiya</li>
-                                </ul>
-
                             </div>
                         </div>
 
@@ -59,21 +64,35 @@ function DomainFarm({
                                     <BsXDiamondFill />
                                 </div>
 
-                                <h3>Monday/Thursday</h3>
-                                <h4>{typeOfMaterial}</h4>
+                                <h3>Tuesday/Friday</h3>
+                                <h4>{typeOfMaterial.two}</h4>
 
                                 <div className="domainfarm__material-img-wrapper">
-                                    <img src={typeOfMaterialImg4} alt={alt} className="domainfarm__material-img" />
-                                    <img src={typeOfMaterialImg5} alt={alt} className="domainfarm__material-img" />
-                                    <img src={typeOfMaterialImg6} alt={alt} className="domainfarm__material-img" />
+                                    <img src={typeOfMaterialImg.two[0]} alt={alt} className="domainfarm__material-img" />
+                                    <img src={typeOfMaterialImg.two[1]} alt={alt} className="domainfarm__material-img" />
+                                    <img src={typeOfMaterialImg.two[2]} alt={alt} className="domainfarm__material-img" />
                                 </div>
 
-                                <ul className="domainfarm__container-features">
-                                    <li>100 Transactions</li>
-                                    <li>2% cashback</li>
-                                    <li>$1000 Limit</li>
-                                </ul>
-
+                                <table className="characters">
+                                    <tr>
+                                        <td className="domainfarm__label">{typeOfMaterialLabel.one[0]}</td>
+                                        <td className="domainfarm__character-img-wrapper">
+                                            { (chars.two[0] || []).map(({src}) => <img src={src} key={src} alt={alt} className="domainfarm__characters-img" />) }
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td className="domainfarm__label">{typeOfMaterialLabel.one[1]}</td>
+                                        <td className="domainfarm__character-img-wrapper">
+                                            { (chars.two[1] || []).map(({src}) => <img src={src} key={src} alt={alt} className="domainfarm__characters-img" />) }
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td className="domainfarm__label">{typeOfMaterialLabel.one[2]}</td>
+                                        <td className="domainfarm__character-img-wrapper">
+                                            { (chars.two[2] || []).map(({src}) => <img src={src} key={src} alt={alt} className="domainfarm__characters-img" />) }
+                                        </td>
+                                    </tr>
+                                </table>
                             </div>
                         </div>
 
@@ -84,15 +103,34 @@ function DomainFarm({
                                 </div>
 
                                 <h3>Wednesday/Saturday</h3>
-                                <h4>$99.99</h4>
-                                <p>per month</p>
-                                <ul className="domainfarm__container-features">
-                                    <li>100 Transactions</li>
-                                    <li>10% cashback</li>
-                                    <li>$10000 Limit</li>
-                                </ul>
+                                <h4>{typeOfMaterial.three}</h4>
 
-                                <Button buttonSize='btn--wide' buttonColor='primary'>Choose plan</Button>
+                                <div className="domainfarm__material-img-wrapper">
+                                    <img src={typeOfMaterialImg.three[0]} alt={alt} className="domainfarm__material-img" />
+                                    <img src={typeOfMaterialImg.three[1]} alt={alt} className="domainfarm__material-img" />
+                                    <img src={typeOfMaterialImg.three[2]} alt={alt} className="domainfarm__material-img" />
+                                </div>
+
+                                <table className="characters">
+                                    <tr>
+                                        <td className="domainfarm__label">{typeOfMaterialLabel.one[0]}</td>
+                                        <td className="domainfarm__character-img-wrapper">
+                                            { (chars.three[0] || []).map(({src}) => <img src={src} key={src} alt={alt} className="domainfarm__characters-img" />) }
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td className="domainfarm__label">{typeOfMaterialLabel.one[1]}</td>
+                                        <td className="domainfarm__character-img-wrapper">
+                                            { (chars.three[1] || []).map(({src}) => <img src={src} key={src} alt={alt} className="domainfarm__characters-img" />) }
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td className="domainfarm__label">{typeOfMaterialLabel.one[2]}</td>
+                                        <td className="domainfarm__character-img-wrapper">
+                                            { (chars.three[2] || []).map(({src}) => <img src={src} key={src} alt={alt} className="domainfarm__characters-img" />) }
+                                        </td>
+                                    </tr>
+                                </table>
                             </div>
                         </div>
 

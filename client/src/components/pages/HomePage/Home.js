@@ -7,7 +7,6 @@ import {farmTalent, farmWeapon} from '../Farming/Data'
 function Home() {
     return (
         <>
-            <DomainFarm {...farmTalent} />
             <HeroSection {...homeObjOne} />
             <HeroSection {...homeObjThree} />
             <HeroSection {...homeObjTwo} />

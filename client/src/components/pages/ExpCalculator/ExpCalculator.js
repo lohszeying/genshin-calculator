@@ -86,7 +86,7 @@ class ExpCalculator extends React.Component {
                             
 
                             <form onSubmit={this.handleSubmit}>
-                                <table>
+                                <table className="expcalculator">
                                 <tr>
                                 <td className="calculated-label">
                                 <label>Current EXP: </label></td>

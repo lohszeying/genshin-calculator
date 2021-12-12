@@ -1,5 +1,5 @@
 .domainfarm__section {
-    padding: 100px 0 160px;
+    padding: 100px 0 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,7 +10,6 @@
     background: linear-gradient(45deg, #0660e9 0%, #276afb 100%);
     box-shadow: 0 6px 20px rgba(56, 125, 255, 0.2);
     width: 400px;
-    height: 500px;
     text-decoration: none;
     border-radius: 4px;
 }
@@ -49,7 +48,6 @@
 .domainfarm__container-cardInfo {
     display: flex;
     flex-direction: column;
-    height: 500px;
     padding: 24px;
     align-items: center;
     color: #fff;
@@ -70,7 +68,7 @@
 }
 
 .domainfarm__container-features {
-    margin: 16px 0 32px;
+    margin: 16px 0 16px;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -86,15 +84,16 @@
 }
 
 .domainfarm__material-img-wrapper {
-    max-width: 75px;
+    max-width: 80px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin-bottom: 15px;
 }
 
 .domainfarm__material-img {
-    max-width: 100%;
+    max-width: 90%;
     padding-right: 0;
     margin: 0 2px 0 2px;
 }
@@ -106,7 +105,6 @@
 }
 
 .domainfarm__characters-img-wrapper {
-    max-width: 75px;
     display: flex;
     flex-direction: row;
     align-items: left;
@@ -114,9 +112,13 @@
 }
 
 .domainfarm__characters-img {
-    max-width: 15%;
+    max-width: 55px;
     padding-right: 0;
     margin: 0 2px 0 2px;
+}
+
+table.characters {
+    border-spacing: 2px 15px;
 }
 
 @media screen and (max-width: 1350px) {
