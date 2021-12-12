@@ -1,10 +1,5 @@
 export const farmTalent = {
     typeOfFarm: 'Talent Book Farming',
-    typeOfMaterial: {
-        one: 'Freedom, Prosperity, Transience',
-        two: 'Resistance, Diligence, Elegance',
-        three: 'Ballad, Gold, Light'
-    },
     typeOfMaterialImg: {
         one: ['images-farming/bookFreedom.png', 'images-farming/bookProsperity.png', 'images-farming/bookTransience.png'],
         two: ['images-farming/bookResistance.png', 'images-farming/bookDiligence.png', 'images-farming/bookElegance.png'],

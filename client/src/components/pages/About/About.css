@@ -1,0 +1,35 @@
+.about__section {
+    padding: 100px 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #1c2237;
+}
+
+.about__wrapper {
+    margin-left: 20%;
+    margin-right: 10%;
+}
+
+.about__heading {
+    margin-bottom: 24px;
+    align-self: center;
+    color: #fafafa;
+}
+
+.about__wrapper p {
+    font-size: 18px;
+    color: #fafafa;
+}
+
+.about__wrapper a {
+    color: #fafafa;
+}
+
+.about__wrapper a:hover {
+    color: #f00946 !important;
+}
+
+.about__wrapper a:visited {
+    color: #bdd0ec;
+}

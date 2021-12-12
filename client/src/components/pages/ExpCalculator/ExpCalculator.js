@@ -1,6 +1,6 @@
-import React from 'react'
-import {levelExp} from './Data'
-import './ExpCalculator.css'
+import React from 'react';
+import {levelExp} from './Data';
+import './ExpCalculator.css';
 import { Button } from '../../Button';
 import { MdFollowTheSigns } from 'react-icons/md';
 
@@ -28,20 +28,13 @@ class ExpCalculator extends React.Component {
     }
     
     handleSubmit(event) {
-        ///alert('A name was submitted: ' + this.state.targetLevel + ", currentLevel: " + this.state.currentLevel);
         this.setState({calculated: true});
 
-        //alert('calculated: ' + this.state.calculated);
-        //console.log("Current level:" + this.state.currentLevel);
-        //alert('A name was submitted: ' + this.state.exp[1]);
         event.preventDefault();
-
-        
 
         let totalEXPNeeded = 0;
 
         for (var i = this.state.currentLevel; i < this.state.targetLevel; i++) {
-            //console.log(this.state.exp[i]);
             totalEXPNeeded += this.state.exp[i];
         }
 
@@ -83,8 +76,6 @@ class ExpCalculator extends React.Component {
                         <p className="exp-subtitle">Calculate the EXP material needed for your Genshin character!</p>
                     
                         <div className="exp-main">
-                            
-
                             <form onSubmit={this.handleSubmit}>
                                 <table className="expcalculator">
                                 <tr>
@@ -145,8 +136,8 @@ class ExpCalculator extends React.Component {
                     </div>
                 </div>
             </>
-        )
+        );
     }
 }
 
-export default ExpCalculator
+export default ExpCalculator;
