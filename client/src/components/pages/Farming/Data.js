@@ -1,9 +1,15 @@
 export const farmTalent = {
     typeOfFarm: 'Talent Book Farming',
     typeOfMaterialImg: {
-        one: ['images-farming/talent/bookFreedom.png', 'images-farming/talent/bookProsperity.png', 'images-farming/talent/bookTransience.png'],
-        two: ['images-farming/talent/bookResistance.png', 'images-farming/talent/bookDiligence.png', 'images-farming/talent/bookElegance.png'],
-        three: ['images-farming/talent/bookBallad.png', 'images-farming/talent/bookGold.png', 'images-farming/talent/bookLight.png']
+        one: [{src: 'images-farming/talent/bookFreedom.png', title: 'Freedom'},
+                {src: 'images-farming/talent/bookProsperity.png', title: 'Prosperity'},
+                {src: 'images-farming/talent/bookTransience.png', title: 'Transience'}],
+        two: [{src: 'images-farming/talent/bookResistance.png', title: 'Resistance'},
+                {src: 'images-farming/talent/bookDiligence.png', title: 'Diligence'},
+                {src: 'images-farming/talent/bookElegance.png', title: 'Elegance'}],
+        three: [{src: 'images-farming/talent/bookBallad.png', title: 'Ballad'},
+                {src: 'images-farming/talent/bookGold.png', title: 'Gold'},
+                {src: 'images-farming/talent/bookLight.png', title: 'Elegance'}]
     },
     typeOfMaterialLabel: {
         one: ['Freedom', 'Prosperity', 'Transience'],

@@ -14,7 +14,7 @@ function About() {
                     <br/>
 
                     <br/>
-                    <p>This is my <a href="https://github.com/lohszeying/genshin-calculator">Github</a>. Website is hosted with Firebase.</p>
+                    <p>This is my <a href="https://github.com/lohszeying/genshin-calculator">Github</a>. Website is deployed and hosted with Firebase.</p>
 
                     <br/>
                     <br/>

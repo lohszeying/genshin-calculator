@@ -23,9 +23,7 @@ function DomainFarm({
                                 <h3>Monday/Thursday</h3>
 
                                 <div className="domainfarm__material-img-wrapper">
-                                    <img src={typeOfMaterialImg.one[0]} alt={alt} className="domainfarm__material-img" />
-                                    <img src={typeOfMaterialImg.one[1]} alt={alt} className="domainfarm__material-img" />
-                                    <img src={typeOfMaterialImg.one[2]} alt={alt} className="domainfarm__material-img" />
+                                    { (typeOfMaterialImg.one || []).map(({src, title}) => <img src={src} key={src} title={title} alt={alt} className="domainfarm__material-img" />) }
                                 </div>
 
                                 <table className="characters">
@@ -57,9 +55,7 @@ function DomainFarm({
                                 <h3>Tuesday/Friday</h3>
 
                                 <div className="domainfarm__material-img-wrapper">
-                                    <img src={typeOfMaterialImg.two[0]} alt={alt} className="domainfarm__material-img" />
-                                    <img src={typeOfMaterialImg.two[1]} alt={alt} className="domainfarm__material-img" />
-                                    <img src={typeOfMaterialImg.two[2]} alt={alt} className="domainfarm__material-img" />
+                                    { (typeOfMaterialImg.two || []).map(({src, title}) => <img src={src} key={src} title={title} alt={alt} className="domainfarm__material-img" />) }
                                 </div>
 
                                 <table className="characters">
@@ -91,9 +87,7 @@ function DomainFarm({
                                 <h3>Wednesday/Saturday</h3>
 
                                 <div className="domainfarm__material-img-wrapper">
-                                    <img src={typeOfMaterialImg.three[0]} alt={alt} className="domainfarm__material-img" />
-                                    <img src={typeOfMaterialImg.three[1]} alt={alt} className="domainfarm__material-img" />
-                                    <img src={typeOfMaterialImg.three[2]} alt={alt} className="domainfarm__material-img" />
+                                    { (typeOfMaterialImg.three || []).map(({src, title}) => <img src={src} key={src} title={title} alt={alt} className="domainfarm__material-img" />) }
                                 </div>
 
                                 <table className="characters">
