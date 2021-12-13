@@ -1,5 +1,5 @@
-import React from 'react'
-import './About.css'
+import React from 'react';
+import './About.css';
 
 function About() {
     return (
@@ -14,7 +14,7 @@ function About() {
                     <br/>
 
                     <br/>
-                    <p>This is my <a href="https://github.com/lohszeying/genshin-calculator">Github</a>. Website is hosted using Heroku.</p>
+                    <p>This is my <a href="https://github.com/lohszeying/genshin-calculator">Github</a>. Website is hosted with Firebase.</p>
 
                     <br/>
                     <br/>
@@ -26,4 +26,4 @@ function About() {
     )
 }
 
-export default About
+export default About;
