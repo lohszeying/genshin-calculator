@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import {Button} from './Button'
 import {Link} from 'react-router-dom';
-import {MdFingerprint} from 'react-icons/md';
 import {FaBars, FaTimes} from 'react-icons/fa';
 import {BsFillCalculatorFill} from 'react-icons/bs';
-import { Button } from './Button';
 import './Navbar.css';
 import {IconContext} from 'react-icons/lib';
 

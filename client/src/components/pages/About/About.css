@@ -33,3 +33,10 @@
 .about__wrapper a:visited {
     color: #bdd0ec;
 }
+
+@media screen and (max-width: 960px) {
+    .about__wrapper {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}

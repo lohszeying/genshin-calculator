@@ -2,7 +2,6 @@ import React from 'react';
 import {levelExp} from './Data';
 import './ExpCalculator.css';
 import { Button } from '../../Button';
-import { MdFollowTheSigns } from 'react-icons/md';
 
 class ExpCalculator extends React.Component {
     constructor(props) {
@@ -16,18 +15,28 @@ class ExpCalculator extends React.Component {
     }
 
     changeCurrentEXP(event) {
-        this.setState({currentEXP: event.target.value});
+        const re = /^[0-9\b]+$/;
+        if (event.target.value === '' || re.test(event.target.value)) {
+            this.setState({currentEXP: event.target.value})
+        }
     }
 
     changeCurrentLevel(event) {
-        this.setState({currentLevel: event.target.value});
+        const re = /^[0-9\b]+$/;
+        if (event.target.value === '' || re.test(event.target.value)) {
+            this.setState({currentLevel: event.target.value});
+        }
     }
 
     changeTargetLevel(event) {
-        this.setState({targetLevel: event.target.value});
+        const re = /^[0-9\b]+$/;
+        if (event.target.value === '' || re.test(event.target.value)) {
+            this.setState({targetLevel: event.target.value});
+        }
     }
     
     handleSubmit(event) {
+
         this.setState({calculated: true});
 
         event.preventDefault();
@@ -79,29 +88,28 @@ class ExpCalculator extends React.Component {
                             <form onSubmit={this.handleSubmit}>
                                 <table className="expcalculator">
                                 <tr>
-                                <td className="calculated-label">
-                                <label>Current EXP: </label></td>
-                                <td><input className="exp-input" type="text" placeholder="1477" value={this.state.currentEXP} onChange={this.changeCurrentEXP.bind(this)} /></td>
+                                <td className="calculated-label">Current EXP:</td>
+                                <td><input className="exp-input" type="number" placeholder="1477" value={this.state.currentEXP} onChange={this.changeCurrentEXP.bind(this)} /></td>
                                 </tr>
                             
                                 <tr>
-                                <td className="calculated-label"><label>Current Level: </label></td>
-                                <td><input className="exp-input" type="text" placeholder="20" value={this.state.currentLevel} onChange={this.changeCurrentLevel.bind(this)} /></td>
+                                <td className="calculated-label">Current Level:</td>
+                                <td><input className="exp-input" type="number" placeholder="20" value={this.state.currentLevel} onChange={this.changeCurrentLevel.bind(this)} /></td>
                                 </tr>
                                 
-                                
                                 <tr>
-                                <td className="calculated-label">
-                                    <label>Target Level: </label></td>
-                                <td><input className="exp-input" type="text" placeholder="80" value={this. state.targetLevel} onChange={this.changeTargetLevel.bind(this)} /></td>
+                                <td className="calculated-label">Target Level:</td>
+                                <td><input className="exp-input" type="number" placeholder="80" value={this.state.targetLevel} onChange={this.changeTargetLevel.bind(this)} /></td>
                                 </tr>
                                 
                                 </table>
                                 
-                                <div className="button">
-                                <Button buttonSize='btn--wide' buttonColor='blue'>Submit</Button> 
-                                </div>
+                                <Button buttonSize='btn--wide' buttonColor='blue'>Submit</Button>
+                               
                             </form>
+                            
+
+                            
 
                             {this.state.calculated ? 
                                 <div className="calculation-container">

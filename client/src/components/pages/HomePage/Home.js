@@ -1,8 +1,6 @@
 import React from 'react'
-import DomainFarm from '../../DomainFarm';
 import HeroSection from '../../HeroSection'
 import {homeObjOne, homeObjTwo, homeObjThree,  homeObjFour} from './Data'
-import {farmTalent, farmWeapon} from '../Farming/Data'
 
 function Home() {
     return (
