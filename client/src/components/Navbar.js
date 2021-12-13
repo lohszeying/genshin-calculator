@@ -53,8 +53,8 @@ function Navbar() {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to='/talent-calculator' className='nav-links' onClick={closeMobileMenu}>
-                                Talent Calculator
+                            <Link to='/resin-material-calculator' className='nav-links' onClick={closeMobileMenu}>
+                                Resin Material Calculator
                             </Link>
                         </li>
                         <li className="nav-item">

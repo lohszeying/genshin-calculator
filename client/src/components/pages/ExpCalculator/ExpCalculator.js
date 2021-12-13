@@ -80,69 +80,66 @@ class ExpCalculator extends React.Component {
     render() {
         return (
             <>
-                <div className="darkBg">
-                    <div className='exp-container'>
+                <div className='exp-container'>
+                    <div className="exp-wrapper">
+
                         <p className="exp-subtitle">Calculate the EXP material needed for your Genshin character!</p>
-                    
-                        <div className="exp-main">
-                            <form onSubmit={this.handleSubmit}>
-                                <table className="expcalculator">
-                                <tr>
-                                <td className="calculated-label">Current EXP:</td>
-                                <td><input className="exp-input" type="number" placeholder="1477" value={this.state.currentEXP} onChange={this.changeCurrentEXP.bind(this)} /></td>
-                                </tr>
+
+                        <form onSubmit={this.handleSubmit}>
+                            <table>
+                            <tr>
+                            <td><label className='exp-label'>Current EXP:</label></td>
+                            <td><input className="exp-input" type="number" placeholder="1477" value={this.state.currentEXP} onChange={this.changeCurrentEXP.bind(this)} /></td>
+                            </tr>
+                        
+                            <tr>
+                            <td><label className='exp-label'>Current Level:</label></td>
+                            <td><input className="exp-input" type="number" placeholder="20" value={this.state.currentLevel} onChange={this.changeCurrentLevel.bind(this)} /></td>
+                            </tr>
                             
+                            <tr>
+                            <td><label className='exp-label'>Target Level:</label></td>
+                            <td><input className="exp-input" type="number" placeholder="80" value={this.state.targetLevel} onChange={this.changeTargetLevel.bind(this)} /></td>
+                            </tr>
+                            
+                            </table>
+                            
+                            <div className='exp-button'><Button buttonSize='btn--wide' buttonColor='blue'>Submit</Button></div>
+                            
+                        </form>
+                        
+                        {this.state.calculated ? 
+                            <div className="calculation-container">
+                                <table>
                                 <tr>
-                                <td className="calculated-label">Current Level:</td>
-                                <td><input className="exp-input" type="number" placeholder="20" value={this.state.currentLevel} onChange={this.changeCurrentLevel.bind(this)} /></td>
+                                    <td className="calculated-label">Total EXP needed:</td>
+                                    <td>{this.state.totalEXP}</td>
                                 </tr>
-                                
+
                                 <tr>
-                                <td className="calculated-label">Target Level:</td>
-                                <td><input className="exp-input" type="number" placeholder="80" value={this.state.targetLevel} onChange={this.changeTargetLevel.bind(this)} /></td>
+                                    <td className="calculated-label">Total Hero's Wits needed:</td>
+                                    <td>{this.state.herosWits}</td>
                                 </tr>
-                                
+
+                                <tr>
+                                    <td className="calculated-label">Total Adventurers needed:</td>
+                                    <td>{this.state.adventurers}</td>
+                                </tr>
+
+                                <tr>
+                                    <td className="calculated-label">Total Wanderers needed:</td>
+                                    <td>{this.state.wanderers}</td>
+                                </tr>
+
                                 </table>
-                                
-                                <Button buttonSize='btn--wide' buttonColor='blue'>Submit</Button>
-                               
-                            </form>
                             
-
-                            
-
-                            {this.state.calculated ? 
-                                <div className="calculation-container">
-                                    <table>
-                                    <tr>
-                                        <td className="calculated-label">Total EXP needed:</td>
-                                        <td>{this.state.totalEXP}</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td className="calculated-label">Total Hero's Wits needed:</td>
-                                        <td>{this.state.herosWits}</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td className="calculated-label">Total Adventurers needed:</td>
-                                        <td>{this.state.adventurers}</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td className="calculated-label">Total Wanderers needed:</td>
-                                        <td>{this.state.wanderers}</td>
-                                    </tr>
-
-                                    </table>
-                                
-                                </div>
-                                :
-                                null
-                            }
-                    </div>
-                    </div>
+                            </div>
+                            :
+                            null
+                        }
                 </div>
+                </div>
+               
             </>
         );
     }
