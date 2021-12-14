@@ -7,15 +7,15 @@ import {FaGithub} from 'react-icons/fa';
 function Footer() {
     return (
         <div className='footer-container'>
-            <section className='footer-subscription'>
+            <div className='footer-subscription'>
                 <p className='footer-subscription-heading'>
                     Genshin Calculator
                 </p>
                 <p className='footer-subscription-text'>
                     A simple project for making website with React.
                 </p>
-            </section>
-            <section className='social-media'>
+            </div>
+            <div className='social-media'>
                 <div className='social-media-wrap'>
                     <div className='footer-logo'>
                         <Link to='/about' className='social-logo'>
@@ -36,7 +36,7 @@ function Footer() {
                         </Link>
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
     );
 }
