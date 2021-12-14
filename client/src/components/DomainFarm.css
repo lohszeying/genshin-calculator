@@ -22,7 +22,7 @@
 .domainfarm__container-card:hover {
     transform: scale(1.06);
     transition: all 0.3s ease-out;
-    color: #1c2237;
+    color: #1c1f25;
 
 }
 
@@ -40,7 +40,7 @@
 }
 
 .domainfarm__heading {
-    color: #1c2237;
+    color: #1c1f25;
     margin-bottom: 24px;
     align-self: center;
 }
