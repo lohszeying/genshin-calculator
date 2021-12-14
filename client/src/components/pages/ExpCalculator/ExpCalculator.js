@@ -90,17 +90,17 @@ class ExpCalculator extends React.Component {
                                 <tbody>
                                     <tr>
                                     <td><label className='exp-label'>Current EXP:</label></td>
-                                    <td><input className="exp-input" type="number" placeholder="1477" value={this.state.currentEXP} onChange={this.changeCurrentEXP.bind(this)} /></td>
+                                    <td><input className="exp-input" type="number" placeholder="1477" value={this.state.currentEXP} onChange={this.changeCurrentEXP.bind(this)} min="0" max="547200" required /></td>
                                     </tr>
                                 
                                     <tr>
                                     <td><label className='exp-label'>Current Level:</label></td>
-                                    <td><input className="exp-input" type="number" placeholder="20" value={this.state.currentLevel} onChange={this.changeCurrentLevel.bind(this)} /></td>
+                                    <td><input className="exp-input" type="number" placeholder="20" value={this.state.currentLevel} onChange={this.changeCurrentLevel.bind(this)} min="1" max="89" required /></td>
                                     </tr>
                                     
                                     <tr>
                                     <td><label className='exp-label'>Target Level:</label></td>
-                                    <td><input className="exp-input" type="number" placeholder="80" value={this.state.targetLevel} onChange={this.changeTargetLevel.bind(this)} /></td>
+                                    <td><input className="exp-input" type="number" placeholder="80" value={this.state.targetLevel} onChange={this.changeTargetLevel.bind(this)} min="2" max="90" required /></td>
                                     </tr>
                                 </tbody>
                             </table>

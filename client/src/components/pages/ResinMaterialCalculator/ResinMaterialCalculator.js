@@ -169,23 +169,23 @@ class ResinMaterialCalculator extends React.Component {
                                     {/* Current number of resin material available*/}
                                     <tr>
                                     <td><label className='resinmaterial-label'>Number of Green Resin Material available:</label></td>
-                                    <td><input className='resinmaterial-input' type="number" placeholder="40" value={this.state.currentGreenMaterial} onChange={this.changeCurrentGreenMaterial.bind(this)} /></td>
+                                    <td><input className='resinmaterial-input' type="number" placeholder="40" value={this.state.currentGreenMaterial} onChange={this.changeCurrentGreenMaterial.bind(this)} min="0" required /></td>
                                     </tr>
 
                                     <tr>
                                     <td><label className='resinmaterial-label'>Number of Blue Resin Material available:</label></td>
-                                    <td><input className='resinmaterial-input' type="number" placeholder="5" value={this.state.currentBlueMaterial} onChange={this.changeCurrentBlueMaterial.bind(this)} /></td>
+                                    <td><input className='resinmaterial-input' type="number" placeholder="5" value={this.state.currentBlueMaterial} onChange={this.changeCurrentBlueMaterial.bind(this)} min="0" required /></td>
                                     </tr>
 
                                     <tr>
                                     <td><label className='resinmaterial-label'>Number of Purple Resin Material available:</label></td>
-                                    <td><input className='resinmaterial-input' type="number" placeholder="2" value={this.state.currentPurpleMaterial} onChange={this.changeCurrentPurpleMaterial.bind(this)} /></td>
+                                    <td><input className='resinmaterial-input' type="number" placeholder="2" value={this.state.currentPurpleMaterial} onChange={this.changeCurrentPurpleMaterial.bind(this)} min="0" required /></td>
                                     </tr>
 
                                     {this.state.type === "Talent" ? null :
                                         <tr>
                                         <td><label className='resinmaterial-label'>Number of Gold Resin Material available:</label></td>
-                                        <td><input className='resinmaterial-input' type="number" placeholder="1" value={this.state.currentGoldMaterial} onChange={this.changeCurrentGoldMaterial.bind(this)} /></td>
+                                        <td><input className='resinmaterial-input' type="number" placeholder="1" value={this.state.currentGoldMaterial} onChange={this.changeCurrentGoldMaterial.bind(this)} min="0" required /></td>
                                         </tr>
                                     }
 
@@ -200,23 +200,23 @@ class ResinMaterialCalculator extends React.Component {
 
                                     <tr>
                                     <td><label className='resinmaterial-label'>Target Number of Green material:</label></td>
-                                    <td><input className='resinmaterial-input' type="number" placeholder="10" value={this.state.targetGreenMaterial} onChange={this.changeTargetGreenMaterial.bind(this)} /></td>
+                                    <td><input className='resinmaterial-input' type="number" placeholder="10" value={this.state.targetGreenMaterial} onChange={this.changeTargetGreenMaterial.bind(this)} min="0" required /></td>
                                     </tr>
 
                                     <tr>
                                     <td><label className='resinmaterial-label'>Target Number of Blue material:</label></td>
-                                    <td><input className='resinmaterial-input' type="number" placeholder="20" value={this.state.targetBlueMaterial} onChange={this.changeTargetBlueMaterial.bind(this)} /></td>
+                                    <td><input className='resinmaterial-input' type="number" placeholder="20" value={this.state.targetBlueMaterial} onChange={this.changeTargetBlueMaterial.bind(this)} min="0" required /></td>
                                     </tr>
 
                                     <tr>
                                     <td><label className='resinmaterial-label'>Target Number of Purple material:</label></td>
-                                    <td><input className='resinmaterial-input' type="number" placeholder="12" value={this.state.targetPurpleMaterial} onChange={this.changeTargetPurpleMaterial.bind(this)} /></td>
+                                    <td><input className='resinmaterial-input' type="number" placeholder="12" value={this.state.targetPurpleMaterial} onChange={this.changeTargetPurpleMaterial.bind(this)} min="0" required /></td>
                                     </tr>
 
                                     {this.state.type === "Talent" ? null:
                                         <tr>
                                         <td><label className='resinmaterial-label'>Target Number of Gold material:</label></td>
-                                        <td><input className='resinmaterial-input' type="number" placeholder="4" value={this.state.targetGoldMaterial} onChange={this.changeTargetGoldMaterial.bind(this)} /></td>
+                                        <td><input className='resinmaterial-input' type="number" placeholder="4" value={this.state.targetGoldMaterial} onChange={this.changeTargetGoldMaterial.bind(this)} min="0" required /></td>
                                         </tr>
                                     }
 

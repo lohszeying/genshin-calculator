@@ -53,7 +53,8 @@ export const farmTalent = {
         {src: 'images-farming/chars/kazuha.png', title: 'Kaedahara Kazuha'},
         {src: 'images-farming/chars/xiangling.png', title: 'Xiangling'}],
 
-        [{src: 'images-farming/chars/ayaka.png', title: 'Kamisato Ayaka'},
+        [{src: 'images-farming/chars/itto.png', title: 'Arataki Itto'},
+        {src: 'images-farming/chars/ayaka.png', title: 'Kamisato Ayaka'},
         {src: 'images-farming/chars/sara.png', title: 'Kujo Sara'}]
         ],
 
@@ -70,7 +71,8 @@ export const farmTalent = {
         {src: 'images-farming/chars/yanfei.png', title: 'Yanfei'},
         {src: 'images-farming/chars/zhongli.png', title: 'Zhongli'}],
         
-        [{src: 'images-farming/chars/raiden.png', title: 'Raiden Shogun'},
+        [{src: 'images-farming/chars/gorou.png', title: 'Gorou'},
+        {src: 'images-farming/chars/raiden.png', title: 'Raiden Shogun'},
         {src: 'images-farming/chars/sayu.png', title: 'Sayu'}]
         ]
     }
