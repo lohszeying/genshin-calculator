@@ -1,19 +1,19 @@
 {
   "short_name": "Genshin Calculator",
-  "name": "Genshin Calculator for your EXP/talent/weapon",
+  "name": "Genshin Calculator",
   "icons": [
     {
-      "src": "paimonlogo.png",
+      "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/png"
+      "type": "image/x-icon"
     },
     {
-      "src": "paimonlogo.png",
+      "src": "logo192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "paimonlogo.png",
+      "src": "logo512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
