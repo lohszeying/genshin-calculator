@@ -87,21 +87,22 @@ class ExpCalculator extends React.Component {
 
                         <form onSubmit={this.handleSubmit}>
                             <table>
-                            <tr>
-                            <td><label className='exp-label'>Current EXP:</label></td>
-                            <td><input className="exp-input" type="number" placeholder="1477" value={this.state.currentEXP} onChange={this.changeCurrentEXP.bind(this)} /></td>
-                            </tr>
-                        
-                            <tr>
-                            <td><label className='exp-label'>Current Level:</label></td>
-                            <td><input className="exp-input" type="number" placeholder="20" value={this.state.currentLevel} onChange={this.changeCurrentLevel.bind(this)} /></td>
-                            </tr>
-                            
-                            <tr>
-                            <td><label className='exp-label'>Target Level:</label></td>
-                            <td><input className="exp-input" type="number" placeholder="80" value={this.state.targetLevel} onChange={this.changeTargetLevel.bind(this)} /></td>
-                            </tr>
-                            
+                                <tbody>
+                                    <tr>
+                                    <td><label className='exp-label'>Current EXP:</label></td>
+                                    <td><input className="exp-input" type="number" placeholder="1477" value={this.state.currentEXP} onChange={this.changeCurrentEXP.bind(this)} /></td>
+                                    </tr>
+                                
+                                    <tr>
+                                    <td><label className='exp-label'>Current Level:</label></td>
+                                    <td><input className="exp-input" type="number" placeholder="20" value={this.state.currentLevel} onChange={this.changeCurrentLevel.bind(this)} /></td>
+                                    </tr>
+                                    
+                                    <tr>
+                                    <td><label className='exp-label'>Target Level:</label></td>
+                                    <td><input className="exp-input" type="number" placeholder="80" value={this.state.targetLevel} onChange={this.changeTargetLevel.bind(this)} /></td>
+                                    </tr>
+                                </tbody>
                             </table>
                             
                             <div className='exp-button'><Button buttonSize='btn--wide' buttonColor='blue'>Submit</Button></div>
