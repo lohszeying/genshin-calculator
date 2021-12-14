@@ -8,6 +8,7 @@ import Footer from './components/pages/Footer/Footer';
 import Home from './components/pages/HomePage/Home';
 import About from './components/pages/About/About';
 import ResinMaterialCalculator from './components/pages/ResinMaterialCalculator/ResinMaterialCalculator';
+import TalentCalculator from './components/pages/TalentCalculator/TalentCalculator';
 
 class App extends Component {
     constructor(props) {
@@ -33,6 +34,7 @@ class App extends Component {
                 <Routes>
                     <Route exact path='/' element={<ExpCalculator />} />
                     <Route path='/farm' element={<Farming />} />
+                    <Route path='/talent-calculator' element={<TalentCalculator />} />
                     <Route path='/resin-material-calculator' element={<ResinMaterialCalculator />} />
                     <Route path='/about' element={<About />} />
                     

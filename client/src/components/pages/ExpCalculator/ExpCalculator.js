@@ -43,7 +43,7 @@ class ExpCalculator extends React.Component {
 
         let totalEXPNeeded = 0;
 
-        for (var i = this.state.currentLevel; i < this.state.targetLevel; i++) {
+        for (var i = parseInt(this.state.currentLevel); i < parseInt(this.state.targetLevel); i++) {
             totalEXPNeeded += this.state.exp[i];
         }
 
@@ -112,26 +112,27 @@ class ExpCalculator extends React.Component {
                         {this.state.calculated ? 
                             <div className="calculation-container">
                                 <table>
-                                <tr>
-                                    <td className="calculated-label">Total EXP needed:</td>
-                                    <td>{this.state.totalEXP}</td>
-                                </tr>
+                                    <tbody>
+                                        <tr>
+                                            <td className="calculated-label">Total EXP needed:</td>
+                                            <td>{this.state.totalEXP}</td>
+                                        </tr>
 
-                                <tr>
-                                    <td className="calculated-label">Total Hero's Wits needed:</td>
-                                    <td>{this.state.herosWits}</td>
-                                </tr>
+                                        <tr>
+                                            <td className="calculated-label">Total Hero's Wits needed:</td>
+                                            <td>{this.state.herosWits}</td>
+                                        </tr>
 
-                                <tr>
-                                    <td className="calculated-label">Total Adventurers needed:</td>
-                                    <td>{this.state.adventurers}</td>
-                                </tr>
+                                        <tr>
+                                            <td className="calculated-label">Total Adventurers needed:</td>
+                                            <td>{this.state.adventurers}</td>
+                                        </tr>
 
-                                <tr>
-                                    <td className="calculated-label">Total Wanderers needed:</td>
-                                    <td>{this.state.wanderers}</td>
-                                </tr>
-
+                                        <tr>
+                                            <td className="calculated-label">Total Wanderers needed:</td>
+                                            <td>{this.state.wanderers}</td>
+                                        </tr>
+                                    </tbody>
                                 </table>
                             
                             </div>

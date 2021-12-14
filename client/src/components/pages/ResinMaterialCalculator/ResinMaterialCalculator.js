@@ -156,7 +156,7 @@ class ResinMaterialCalculator extends React.Component {
                 <div className='resinmaterial-container'>
                     <div className='resinmaterial-wrapper'>
                         <p className="exp-subtitle">Input the number of resin material you have, and your target resin material number.
-                        Calculator will output the number of resin material you still need to farm.</p>
+                        Calculator will calculate the number of resin material you still need to farm.</p>
 
                         <div onChange={this.changeResinFarmType} className='radio-button-wrapper'>
                             <input type="radio" value="Talent" name="typeOfResinMaterial" defaultChecked /> <div className='radio-button'>Talent</div>
