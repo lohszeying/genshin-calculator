@@ -2,6 +2,7 @@ import React from 'react';
 import {levelExp} from './Data';
 import './ExpCalculator.css';
 import { Button } from '../../Button';
+import axios from "axios";
 
 class ExpCalculator extends React.Component {
     constructor(props) {
@@ -34,8 +35,26 @@ class ExpCalculator extends React.Component {
             this.setState({targetLevel: event.target.value});
         }
     }
-    
+
+    //Calculation using backend
     handleSubmit(event) {
+        event.preventDefault();
+
+        const data = JSON.stringify({
+            currentEXP: this.state.currentEXP,
+            currentLevel: this.state.currentLevel,
+            targetLevel: this.state.targetLevel
+        });
+
+        axios.post('/charExp/send', {data}, {headers:{"Content-Type" : "application/json"}});
+
+        axios.get('/charExp/receive').then(res => {
+            this.setState({calculated: true, herosWits: res.data.numHeroWitsNeeded, adventurers: res.data.numAdventurersNeeded, wanderers: res.data.numWanderersNeeded, totalEXP: res.data.totalEXP})
+        })
+    }
+
+    //Calculation using frontend
+    /*handleSubmit(event) {
 
         this.setState({calculated: true});
 
@@ -75,7 +94,7 @@ class ExpCalculator extends React.Component {
         }
 
         this.setState({herosWits: numHeroWits, adventurers: numAdventurers, wanderers: numWanderers});
-    }
+    } */
 
     render() {
         return (
