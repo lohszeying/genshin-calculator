@@ -32,10 +32,6 @@ var jsonParser = bodyParser.json()
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 router.post('/send', urlencodedParser, function(req, res) { //post is only '/sendCharExp' if app.js is '/'
-    //console.log("levelEXP[1]: " + lvlExp.levelExp[1]);
-
-    //console.log(req.body)
-
     const dataReceived = JSON.parse(req.body.data);
 
     let totalEXPNeeded = 0;
@@ -76,9 +72,19 @@ router.post('/send', urlencodedParser, function(req, res) { //post is only '/sen
     herosWits = numHeroWits;
     adventurers = numAdventurers;
     wanderers = numWanderers;
+
+    const sendData = JSON.stringify({
+        totalEXP: totalEXP,
+        numHeroWitsNeeded: herosWits,
+        numAdventurersNeeded: adventurers,
+        numWanderersNeeded: wanderers
+    });
+
+    res.send(sendData);
 });
 
-router.get("/receive", function(req, res, next) {
+//NOT NEEDED
+/*router.get("/receive", function(req, res, next) {
     //res.send("API is working properly");
     const data = JSON.stringify({
         totalEXP: totalEXP,
@@ -87,9 +93,7 @@ router.get("/receive", function(req, res, next) {
         numWanderersNeeded: wanderers
     });
 
-    //console.log("DATA in backend: " + data);
-
     res.send(data);
-});
+}); */
 
 module.exports = router;
