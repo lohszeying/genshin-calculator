@@ -46,9 +46,9 @@ class ExpCalculator extends React.Component {
             targetLevel: this.state.targetLevel
         });
 
-        axios.post('https://genshin-calculators.herokuapp.com/charExp/send', {data}, {headers:{"Content-Type" : "application/json"}});
+        axios.post('https://genshin-calculators.herokuapp.com/charExp/send', {data}, {headers:{"Content-Type" : "application/json"}, mode:'cors'});
 
-        axios.get('https://genshin-calculators.herokuapp.com/charExp/receive').then(res => {
+        axios.get('https://genshin-calculators.herokuapp.com/charExp/receive', {mode: 'cors'}).then(res => {
             this.setState({calculated: true, herosWits: res.data.numHeroWitsNeeded, adventurers: res.data.numAdventurersNeeded, wanderers: res.data.numWanderersNeeded, totalEXP: res.data.totalEXP})
         })
     }

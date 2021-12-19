@@ -36,8 +36,6 @@ router.post('/send', urlencodedParser, function(req, res) { //post is only '/sen
 
     //console.log(req.body)
 
-    res.set('Access-Control-Allow-Origin', '*');
-
     const dataReceived = JSON.parse(req.body.data);
 
     let totalEXPNeeded = 0;
@@ -81,8 +79,6 @@ router.post('/send', urlencodedParser, function(req, res) { //post is only '/sen
 });
 
 router.get("/receive", function(req, res, next) {
-    res.set('Access-Control-Allow-Origin', '*');
-
     //res.send("API is working properly");
     const data = JSON.stringify({
         totalEXP: totalEXP,
