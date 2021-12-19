@@ -20,20 +20,16 @@ var lvlExp = require('./Data');
 
 var router = express.Router();
 
-var totalEXP = 0;
-var herosWits = 0;
-var adventurers = 0;
-var wanderers = 0 ;
-
 var bodyParser = require('body-parser')
 var jsonParser = bodyParser.json()
  
 // create application/x-www-form-urlencoded parser
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
-router.post('/send', urlencodedParser, function(req, res) { //post is only '/sendCharExp' if app.js is '/'
+router.post('/calculate', urlencodedParser, function(req, res) {
     const dataReceived = JSON.parse(req.body.data);
 
+    let totalEXP = 0;
     let totalEXPNeeded = 0;
 
     for (var i = parseInt(dataReceived.currentLevel); i < parseInt(dataReceived.targetLevel); i++) {
@@ -43,8 +39,6 @@ router.post('/send', urlencodedParser, function(req, res) { //post is only '/sen
     totalEXPNeeded -= dataReceived.currentEXP;
 
     totalEXP = totalEXPNeeded;
-
-    //this.setState({totalEXP: totalEXPNeeded});
 
     let numHeroWits = 0;
     let numAdventurers = 0;
@@ -69,31 +63,14 @@ router.post('/send', urlencodedParser, function(req, res) { //post is only '/sen
         }
     }
 
-    herosWits = numHeroWits;
-    adventurers = numAdventurers;
-    wanderers = numWanderers;
-
     const sendData = JSON.stringify({
         totalEXP: totalEXP,
-        numHeroWitsNeeded: herosWits,
-        numAdventurersNeeded: adventurers,
-        numWanderersNeeded: wanderers
+        numHeroWitsNeeded: numHeroWits,
+        numAdventurersNeeded: numAdventurers,
+        numWanderersNeeded: numWanderers
     });
 
     res.send(sendData);
 });
-
-//NOT NEEDED
-/*router.get("/receive", function(req, res, next) {
-    //res.send("API is working properly");
-    const data = JSON.stringify({
-        totalEXP: totalEXP,
-        numHeroWitsNeeded: herosWits,
-        numAdventurersNeeded: adventurers,
-        numWanderersNeeded: wanderers
-    });
-
-    res.send(data);
-}); */
 
 module.exports = router;

@@ -9,7 +9,7 @@ var bodyParser = require('body-parser')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var testAPIRouter = require('./routes/testAPI');
-var sendCharExpRouter = require('./routes/ExpCalculator/expcalculator');
+var charEXPRouter = require('./routes/ExpCalculator/expcalculator');
 
 var app = express();
 
@@ -30,9 +30,9 @@ app.use(bodyParser.json())
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/testAPI', testAPIRouter);
-app.use('/charExp', sendCharExpRouter);
+app.use('/charExp', charEXPRouter);
 
-/*app.post('/sendCharExp', (req, res) => {
+/*app.post('/charExp/calculate', (req, res) => {
     console.log(req.body);
 }); */
 
