@@ -119,17 +119,17 @@ class ExpCalculator extends React.Component {
                                         </tr>
 
                                         <tr>
-                                            <td className="calculated-label">Total Hero's Wits needed:</td>
+                                            <td className="calculated-label">Total Hero's Wit needed:</td>
                                             <td>{this.state.herosWits}</td>
                                         </tr>
 
                                         <tr>
-                                            <td className="calculated-label">Total Adventurers needed:</td>
+                                            <td className="calculated-label">Total Adventurer's Experience needed:</td>
                                             <td>{this.state.adventurers}</td>
                                         </tr>
 
                                         <tr>
-                                            <td className="calculated-label">Total Wanderers needed:</td>
+                                            <td className="calculated-label">Total Wanderer's Advice needed:</td>
                                             <td>{this.state.wanderers}</td>
                                         </tr>
                                     </tbody>
