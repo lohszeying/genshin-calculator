@@ -9,23 +9,36 @@ import Home from './components/pages/HomePage/Home';
 import About from './components/pages/About/About';
 import ResinMaterialCalculator from './components/pages/ResinMaterialCalculator/ResinMaterialCalculator';
 import TalentCalculator from './components/pages/TalentCalculator/TalentCalculator';
+import dotenv from 'dotenv';
+import axios from 'axios';
+
+require('dotenv').config();
+const API_Link = process.env.REACT_APP_API_LINK;
+
+const LOCAL_DOMAINS = ["localhost", "127.0.0.1"];
+
+let API_ORIGIN = '';
+
+if (LOCAL_DOMAINS.includes(window.location.hostname)) {
+    //Local server
+    API_ORIGIN = 'http://localhost:5000';
+} else {
+    API_ORIGIN = API_Link;
+}
+
+export {API_ORIGIN};
 
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = { apiResponse: "" };
-    }
-
-    /*callAPI() {
-        fetch("http://localhost:9000/testAPI")
-            .then(res => res.text())
-            .then(res => this.setState({ apiResponse: res }))
-            .catch(err => err);
+        this.state = { };
     }
 
     componentDidMount() {
-        this.callAPI();
-    } */
+        axios.get(API_ORIGIN + '/wakeHeroku')
+            .then(res => res.data)
+            .catch(err => err);
+    }
 
     render() {
         return (
