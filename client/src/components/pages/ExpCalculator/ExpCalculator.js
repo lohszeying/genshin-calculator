@@ -3,6 +3,7 @@ import {levelExp} from './Data';
 import './ExpCalculator.css';
 import { Button } from '../../Button';
 import axios from "axios";
+import {API_ORIGIN} from '../../../App'
 
 class ExpCalculator extends React.Component {
     constructor(props) {
@@ -46,7 +47,7 @@ class ExpCalculator extends React.Component {
             targetLevel: this.state.targetLevel
         });
 
-        axios.post('https://genshin-calculators.herokuapp.com/charExp/calculate', {data})
+        axios.post(API_ORIGIN + '/charExp/calculate', {data})
             .then(res => {
                 this.setState({calculated: true, herosWits: res.data.numHeroWitsNeeded, adventurers: res.data.numAdventurersNeeded, wanderers: res.data.numWanderersNeeded, totalEXP: res.data.totalEXP})
             })

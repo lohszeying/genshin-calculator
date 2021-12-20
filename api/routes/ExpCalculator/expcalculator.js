@@ -20,13 +20,15 @@ var lvlExp = require('./Data');
 
 var router = express.Router();
 
-var bodyParser = require('body-parser')
+/*var bodyParser = require('body-parser')
 var jsonParser = bodyParser.json()
  
 // create application/x-www-form-urlencoded parser
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
-router.post('/calculate', urlencodedParser, function(req, res) {
+router.post('/calculate', urlencodedParser, function(req, res) { */
+
+router.post('/calculate', function(req, res) {
     const dataReceived = JSON.parse(req.body.data);
 
     let totalEXP = 0;

@@ -8,7 +8,7 @@ var bodyParser = require('body-parser')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var testAPIRouter = require('./routes/testAPI');
+var wakeHerokuRouter = require('./routes/wakeHeroku');
 var charEXPRouter = require('./routes/ExpCalculator/expcalculator');
 
 var app = express();
@@ -27,9 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/testAPI', testAPIRouter);
+app.use('/wakeHeroku', wakeHerokuRouter);
 app.use('/charExp', charEXPRouter);
 
 /*app.post('/charExp/calculate', (req, res) => {
