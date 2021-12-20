@@ -7,15 +7,16 @@
 }
 
 .domainfarm__container-card {
-    background: linear-gradient(45deg, #0660e9 0%, #276afb 100%);
+    background: #1c1f25;
     box-shadow: 0 6px 20px rgba(56, 125, 255, 0.2);
     width: 450px;
     text-decoration: none;
     border-radius: 4px;
+    margin: 0 24px;
 }
 
-.domainfarm__container-card:nth-child(2) {
-    background: #242424;
+.domainfarm__container-card:nth-child() {
+    background: linear-gradient(45deg, #0660e9 0%, #276afb 100%);
     margin: 0 24px;
 }
 
@@ -139,7 +140,6 @@ table.characters {
     }
 
     .domainfarm__container-card:nth-child(2) {
-        background: #242424;
         margin: 24px;
     }
 

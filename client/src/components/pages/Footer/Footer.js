@@ -12,7 +12,7 @@ function Footer() {
                     Genshin Calculator
                 </p>
                 <p className='footer-subscription-text'>
-                    A simple project for making website with React.
+                    A simple project for making website with React and Express.
                 </p>
             </div>
             <div className='social-media'>

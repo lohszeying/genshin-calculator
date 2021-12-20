@@ -48,9 +48,7 @@ On the project root folder, navigate to `client` directory and run `npm install`
 
 To run frontend on local host on development build, go to client directory and run `npm start` on your terminal. The localhost URL will be http://localhost:3000.
 
-Under each scripts in the frontend, if both frontend and backend are done via localhosting, set axios URL to just the API call, eg. `/charExp/calculate`.
-
-If backend is hosted externally, change axios URL to backend API link, eg. `https://genshin-calculators.herokuapp.com/charExp/calculate`.
+If backend is hosted externally, edit the .env file under client directory to your backend link, eg. `https://genshin-calculators.herokuapp.com/charExp/calculate`.
 
 ### Firebase
 
