@@ -6,10 +6,10 @@ var logger = require('morgan');
 var cors = require('cors');
 var bodyParser = require('body-parser')
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 var wakeHerokuRouter = require('./routes/wakeHeroku');
 var charEXPRouter = require('./routes/ExpCalculator/expcalculator');
+var talentCalculatorRouter = require('./routes/TalentCalculator/talentcalculator');
+var resinCalculatorRouter = require('./routes/ResinMaterialCalculator/resinmaterialcalculator');
 
 var app = express();
 
@@ -29,10 +29,8 @@ app.use(bodyParser.json())
 
 app.use('/wakeHeroku', wakeHerokuRouter);
 app.use('/charExp', charEXPRouter);
-
-/*app.post('/charExp/calculate', (req, res) => {
-    console.log(req.body);
-}); */
+app.use('/talentcalc', talentCalculatorRouter);
+app.use('/resincalc', resinCalculatorRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

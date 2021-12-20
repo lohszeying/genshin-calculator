@@ -1,6 +1,8 @@
 import React from 'react';
 import { Button } from '../../Button';
 import './ResinMaterialCalculator.css';
+import axios from "axios";
+import {API_ORIGIN} from '../../../App'
 
 class ResinMaterialCalculator extends React.Component {
     constructor(props) {
@@ -79,6 +81,30 @@ class ResinMaterialCalculator extends React.Component {
     }
 
     handleSubmit(event) {
+        event.preventDefault();
+
+        const data = JSON.stringify({
+            currentGreenMaterial: this.state.currentGreenMaterial,
+            currentBlueMaterial: this.state.currentBlueMaterial,
+            currentPurpleMaterial: this.state.currentPurpleMaterial,
+            currentGoldMaterial: this.state.currentGoldMaterial,
+            targetGreenMaterial: this.state.targetGreenMaterial,
+            targetBlueMaterial: this.state.targetBlueMaterial,
+            targetPurpleMaterial: this.state.targetPurpleMaterial,
+            targetGoldMaterial: this.state.targetGoldMaterial,
+            type: this.state.type
+        });
+
+        axios.post(API_ORIGIN + '/resincalc/calculate', {data})
+            .then(res => {
+                this.setState({calculated: true, finalGreenNeeded: res.data.finalGreen, finalBlueNeeded: res.data.finalBlue, finalPurpleNeeded: res.data.finalPurple, finalGoldNeeded: res.data.finalGold})
+            })
+            .catch(error => {
+                throw error;
+        })
+    }
+
+    /*handleSubmit(event) {
         this.setState({calculated: true});
         event.preventDefault();
         
@@ -146,7 +172,7 @@ class ResinMaterialCalculator extends React.Component {
 
             this.setState({finalGreenNeeded: finalGreen, finalBlueNeeded: finalBlue, finalPurpleNeeded: finalPurple, finalGoldNeeded: finalGold});
         }
-    }
+    } */
 
     
 

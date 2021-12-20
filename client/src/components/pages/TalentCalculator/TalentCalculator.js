@@ -1,6 +1,8 @@
 import React from 'react';
 import { Button } from '../../Button';
 import {numTalentMats} from './Data';
+import axios from "axios";
+import {API_ORIGIN} from '../../../App'
 
 class TalentWeaponCalculator extends React.Component {
     constructor(props) {
@@ -58,6 +60,27 @@ class TalentWeaponCalculator extends React.Component {
     }
 
     handleSubmit(event) {
+        event.preventDefault();
+
+        const data = JSON.stringify({
+            currentNormalAttackLvl: this.state.currentNormalAttackLvl,
+            currentSkillLvl: this.state.currentSkillLvl,
+            currentBurstLvl: this.state.currentBurstLvl,
+            targetNormalAttackLvl: this.state.targetNormalAttackLvl,
+            targetSkillLvl: this.state.targetSkillLvl,
+            targetBurstLvl: this.state.targetBurstLvl,
+        });
+
+        axios.post(API_ORIGIN + '/talentcalc/calculate', {data})
+            .then(res => {
+                this.setState({calculated: true, finalGreenNeeded: res.data.finalGreen, finalBlueNeeded: res.data.finalBlue, finalPurpleNeeded: res.data.finalPurple})
+            })
+            .catch(error => {
+                throw error;
+        })
+    }
+
+    /*handleSubmit(event) {
         this.setState({calculated: true});
         event.preventDefault();
         
@@ -98,10 +121,8 @@ class TalentWeaponCalculator extends React.Component {
             }
         }
 
-        console.log("finalGreen: " + finalGreen + ", finalBlue: " + finalBlue + ", finalPurple: " + finalPurple);
-
         this.setState({finalGreenNeeded: finalGreen, finalBlueNeeded: finalBlue, finalPurpleNeeded: finalPurple});
-    }
+    } */
 
     render() {
         return (
