@@ -30,7 +30,8 @@ export const farmTalent = {
         {src: 'images-farming/chars/ningguang.png', title: 'Ningguang'},
         {src: 'images-farming/chars/qiqi.png', title: 'Qiqi'},
         {src: 'images-farming/chars/traveler_boy_geo.png', title: 'Geo Traveler'},
-        {src: 'images-farming/chars/xiao.png', title: 'Xiao'}],
+        {src: 'images-farming/chars/xiao.png', title: 'Xiao'},
+        {src: 'images-farming/chars/shenhe.png', title: 'Shenhe'}],
 
         [{src: 'images-farming/chars/kokomi.png', title: 'Sangonomiya Kokomi'},
         {src: 'images-farming/chars/thoma.png', title: 'Thoma'},
@@ -51,7 +52,8 @@ export const farmTalent = {
         {src: 'images-farming/chars/ganyu.png', title: 'Ganyu'},
         {src: 'images-farming/chars/hutao.png', title: 'Hu Tao'},
         {src: 'images-farming/chars/kazuha.png', title: 'Kaedahara Kazuha'},
-        {src: 'images-farming/chars/xiangling.png', title: 'Xiangling'}],
+        {src: 'images-farming/chars/xiangling.png', title: 'Xiangling'},
+        {src: 'images-farming/chars/yunjin.png', title: 'Yunjin'}],
 
         [{src: 'images-farming/chars/itto.png', title: 'Arataki Itto'},
         {src: 'images-farming/chars/ayaka.png', title: 'Kamisato Ayaka'},
