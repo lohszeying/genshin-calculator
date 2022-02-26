@@ -75,7 +75,8 @@ export const farmTalent = {
         
         [{src: 'images-farming/chars/gorou.png', title: 'Gorou'},
         {src: 'images-farming/chars/raiden.png', title: 'Raiden Shogun'},
-        {src: 'images-farming/chars/sayu.png', title: 'Sayu'}]
+        { src: 'images-farming/chars/sayu.png', title: 'Sayu' },
+        { src: 'images-farming/chars/yaemiko.png', title: 'Yae Miko' }]
         ]
     }
 
