@@ -57,7 +57,8 @@ export const farmTalent = {
 
         [{src: 'images-farming/chars/itto.png', title: 'Arataki Itto'},
         {src: 'images-farming/chars/ayaka.png', title: 'Kamisato Ayaka'},
-        {src: 'images-farming/chars/sara.png', title: 'Kujo Sara'}]
+        { src: 'images-farming/chars/sara.png', title: 'Kujo Sara' },
+        { src: 'images-farming/chars/ayato.png', title: 'Kamisato Ayato' }]
         ],
 
         three: [[{src: 'images-farming/chars/albedo.png', title: 'Albedo'},
