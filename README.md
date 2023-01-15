@@ -66,6 +66,10 @@ To run backend on local host, go to api directory and run `nodemon start` or `np
 
 Backend local hosting is done on http://localhost:5000.
 
-### Heroku
+### ~~Heroku~~
 
-Push your project to Github then to Heroku via Github. It is important for root directory to contain `package.json` file as Heroku requires it. The current `package.json` file in root directory is used to set up backend only.
+~~Push your project to Github then to Heroku via Github. It is important for root directory to contain `package.json` file as Heroku requires it. The current `package.json` file in root directory is used to set up backend only.~~
+
+### Render
+
+As of 15/01/23, backend is hosted with render.
