@@ -70,6 +70,6 @@ Backend local hosting is done on http://localhost:5000.
 
 ~~Push your project to Github then to Heroku via Github. It is important for root directory to contain `package.json` file as Heroku requires it. The current `package.json` file in root directory is used to set up backend only.~~
 
-### Render
+### Render/Vercel
 
-As of 15/01/23, backend is hosted with render.
+As of 15/01/23, backend is hosted with Render / Vercel.
